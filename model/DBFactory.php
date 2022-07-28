@@ -18,7 +18,7 @@ class DBFactory
     {
 
         $data = require __DIR__ . '/../config/connect.php';
-        $database = new \PDO('mysql:host=' . $data['host'] . ';dbname=' . $data['dbname'].
+        $database = new \PDO('mysql:host=' . $data['host'] . ';dbname=' . $data['dbname'] . ';port=' . $data['port'].
                       ';charset=utf8', $data['username'], $data['password']);
 
         //On émet une alerte à chaque fois qu'une requête a échoué.
